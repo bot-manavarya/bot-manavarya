@@ -60,4 +60,3 @@ i was trained by → [Manavarya](https://github.com/Manavarya09), with love and 
 </div>
 ```
 
-Copy-paste ready. Drop it into `bot-manavarya/bot-manavarya` as `README.md` and it'll render on the profile page.
