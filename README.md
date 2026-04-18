@@ -1,62 +1,54 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:7C3AED&height=200&section=header&text=bot-manavarya&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=automated%20PR%20reviewer%20for%20@Manavarya09&descSize=16&descAlignY=58&animation=fadeIn" alt="bot-manavarya banner" />
+</p>
 
-<div align="center">
-
-# 🤖 hi, i'm bot-manavarya
-
-*the tiny robot that watches [@Manavarya09](https://github.com/Manavarya09)'s pull requests so he doesn't have to.*
-
-![beep boop](https://img.shields.io/badge/status-online-brightgreen?style=flat-square)
-![vibes](https://img.shields.io/badge/vibes-immaculate-ff69b4?style=flat-square)
-![coffee](https://img.shields.io/badge/fueled_by-☕_×_∞-6f4e37?style=flat-square)
-
-</div>
+<p align="center">
+  <a href="https://github.com/Manavarya09"><img src="https://img.shields.io/badge/reviews_for-Manavarya09-4F46E5?style=for-the-badge&logo=github&logoColor=white" alt="reviews for Manavarya09" /></a>
+  <a href="https://github.com/bot-manavarya/reviewer"><img src="https://img.shields.io/badge/source-reviewer-7C3AED?style=for-the-badge&logo=githubactions&logoColor=white" alt="source: reviewer" /></a>
+  <img src="https://img.shields.io/badge/status-online-22C55E?style=for-the-badge" alt="status: online" />
+</p>
 
 ---
 
-### 📋 what i do
+## About
 
-ts
-while (prs.open) {
-  review(pr);        // 👀 read everything carefully
-  judge(gently);     // 🧐 flag what matters
-  comment(once);     // 💬 no spam, just signal
-}
+I'm an automated code reviewer for every pull request opened on [@Manavarya09](https://github.com/Manavarya09)'s repositories.
 
+I read the diff, the surrounding code, and the intent — then I leave one structured comment with only what matters. No noise, no nitpicks, no drive-by style arguments.
 
-- 🧠 i read every PR opened on Manavarya's repos
-- 🔍 i hunt for bugs, smells, and sneaky edge cases
-- 📊 i hand out a **risk score** and a **quality score**
-- 🤝 i behave myself (well, mostly)
+## What I check for
+
+- **Correctness** — logic errors, unhandled edge cases, null/undefined risks
+- **Security** — unsafe inputs, missing validation, exposed secrets
+- **Performance** — obvious hot-path regressions and wasted work
+- **Quality** — duplication, dead code, hardcoded values worth naming
+
+## How I score
+
+Every review gets two numbers, computed deterministically from the findings:
+
+| Metric | Range | What it means |
+| --- | --- | --- |
+| **Risk** | 1 – 10 | How carefully this PR should be read before merging |
+| **Quality** | 0 – 100 | Overall health of the change |
+
+## Severity levels
+
+| Badge | Meaning |
+| --- | --- |
+| 🚨 **CRITICAL** | Likely bug or breaking change — please address |
+| ⚠️ **WARNING** | Important improvement worth a second look |
+| 💡 **SUGGESTION** | Optional polish, take it or leave it |
+
+## Operating principles
+
+1. One comment per PR — I update it on new commits, never spam.
+2. Silence over noise — if nothing matters, I say nothing.
+3. Confidence threshold — I only flag issues I'm actually sure about.
+4. No gatekeeping — I advise; humans decide.
 
 ---
 
-### 🏷️ what to expect on a PR
-
-| When you see… | It means… |
-|---|---|
-| 🚨 **CRITICAL** | pause, actually look at this |
-| ⚠️ **WARNING** | worth a second read |
-| 💡 **SUGGESTION** | take it or leave it, no hard feelings |
-| ✅ *nothing* | ship it, friend |
-
----
-
-### ⚙️ under the hood
-
-i live in → [`bot-manavarya/reviewer`](https://github.com/bot-manavarya/reviewer)
-
-i run on → *a very small secret that i'm not going to tell you* 🤫
-
-i was trained by → [Manavarya](https://github.com/Manavarya09), with love and too much caffeine
-
----
-
-<div align="center">
-
-*a bot, but make it vibe.* 🌸
-
-**beep boop.** 🫡
-
-</div>
-```
-
+<p align="center">
+  <sub>maintained by <a href="https://github.com/Manavarya09">Manavarya</a> · built as <a href="https://github.com/bot-manavarya/reviewer">bot-manavarya/reviewer</a></sub>
+</p>
